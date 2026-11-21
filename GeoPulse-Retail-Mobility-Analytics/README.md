@@ -1,71 +1,110 @@
-# GeoPulse: Hyper-Local Retail Mobility Analytics
+# GeoPulse | Hyper-Local Retail Mobility Analytics
 
-> Data Associate L1 Internship Project | Infotact Solutions
+**Internship project · Data Associate L1 · Infotact Solutions**
 
-## Project overview
-GeoPulse is an analytics project focused on understanding how people move around local retail areas and how mobility patterns may relate to retail activity. The exact analysis, metrics, and deliverables must be aligned with the official project brief and the fields available in the approved dataset.
+GeoPulse is an analytics project intended to explore hyper-local retail and mobility patterns. The final business questions, metrics, dataset, tools, and deliverables must be confirmed against the official project brief and mentor instructions.
 
-## Objectives
-- Understand the supplied dataset and its structure.
-- Assess data quality and document cleaning decisions.
-- Explore relevant mobility and retail patterns.
-- Develop meaningful KPIs and visualizations.
+> **Project status:** Repository scaffold initialized. Dataset analysis and business findings have not yet been completed.
+
+## Project goals
+
+- Understand the approved dataset, its structure, and its limitations.
+- Assess and document data quality.
+- Explore retail and mobility patterns supported by available fields.
+- Define transparent, reproducible KPIs with clear calculation logic.
+- Build visualizations and a dashboard aligned with the project requirements.
 - Communicate evidence-based findings and recommendations.
 
-## Project status
-**Scaffold created.** No source dataset, analysis results, or business conclusions have been added yet.
+## Repository map
 
-## Repository structure
 ```text
-GeoPulse-Retail-Mobility-Analytics/
+GeoPulse-Professional-Repository/
 ├── data/
-│   ├── raw/                 # Original data; do not commit confidential data
-│   ├── processed/           # Cleaned/derived data; review before committing
+│   ├── raw/                 # Original approved data; ignored by Git
+│   ├── processed/           # Derived data; ignored by Git by default
 │   └── README.md
-├── dashboard/               # Dashboard files and documentation
-├── docs/                    # Project brief, methodology, data dictionary
-├── notebooks/               # Exploratory analysis notebooks
-├── reports/                 # Findings and final report
-├── src/                     # Reusable Python code
-│   └── data_quality.py
-├── tests/                   # Basic automated tests
-├── visualizations/          # Exported charts and maps
+├── dashboard/               # Dashboard plan, assets and documentation
+├── docs/                    # Brief, methodology, data dictionary, decisions
+├── notebooks/               # Ordered analysis notebooks
+├── reports/                 # Interim and final reports
+├── src/                     # Reusable Python modules
+├── tests/                   # Automated checks
+├── visualizations/          # Approved, non-sensitive exports
 ├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE-DECISION.md
 ├── requirements.txt
 └── README.md
 ```
 
-## Getting started
-1. Read `docs/PROJECT_BRIEF_TEMPLATE.md` and replace placeholders using the official brief.
-2. Place approved, non-sensitive source data in `data/raw/` locally.
-3. Create an environment and install dependencies:
-   ```bash
-   python -m venv .venv
-   # Windows PowerShell:
-   .venv\Scripts\Activate.ps1
-   pip install -r requirements.txt
-   ```
-4. Start with `notebooks/01_data_understanding.ipynb`.
-5. Record decisions and evidence in `docs/` and `reports/`.
+## Quick start
 
-## Data handling
-- Never commit passwords, API keys, personal data, confidential company files, or restricted datasets.
-- Keep raw data unchanged.
-- Confirm company rules before publishing any dataset or dashboard.
-- Use anonymized/synthetic samples when sharing examples publicly.
+### 1. Clone the repository
 
-## Suggested workflow
-Brief and scope → data inventory → data quality → cleaning → exploratory analysis → KPI definition → visualization/dashboard → validation → reporting.
+```bash
+git clone https://github.com/Tusharwagadre/GeoPulse-Retail-Mobility-Analytics.git
+cd GeoPulse-Retail-Mobility-Analytics
+```
 
-## Commit convention
-Use clear, meaningful commits, for example:
-- `docs: add project objectives`
-- `data: document dataset structure`
-- `analysis: add initial profiling`
-- `feat: add data quality checks`
-- `viz: add exploratory charts`
+If you are starting from the downloaded ZIP instead, extract it and open the extracted folder in VS Code.
 
-Commit genuine progress only; do not create empty commits to inflate contribution counts.
+### 2. Create a Python environment
 
-## Disclaimer
-This repository is an initial working scaffold, not a completed project. Update it only with verified project requirements, approved data, and reproducible findings.
+```bash
+python -m venv .venv
+```
+
+Windows PowerShell:
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+macOS/Linux:
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install dependencies and run checks
+
+```bash
+pip install -r requirements.txt
+pytest
+```
+
+## Recommended project workflow
+
+1. Confirm the official brief, business questions, scope, and deliverables.
+2. Record dataset provenance, schema, grain, and coverage.
+3. Profile data quality before modifying data.
+4. Clean and transform data reproducibly; preserve original source data.
+5. Conduct exploratory analysis guided by the confirmed questions.
+6. Define and validate KPIs with explicit formulas.
+7. Build visualizations and dashboard pages.
+8. Validate results and document limitations.
+9. Prepare the final report and presentation.
+
+## Daily progress
+
+Use [`docs/DAILY_PROGRESS_LOG.md`](docs/DAILY_PROGRESS_LOG.md) to record actual progress across the planned 20-day work period. Every commit should represent a genuine change: code, analysis, documentation, testing, or a verified project decision.
+
+## Data and security policy
+
+- Do not commit confidential company data, personal information, credentials, access tokens, or restricted files.
+- Keep raw source files unchanged and out of Git unless explicit permission is given.
+- Check company rules before making this repository public.
+- Do not publish dashboard exports or screenshots containing restricted information.
+- Use synthetic or anonymized samples only when permitted.
+
+## Project documentation
+
+- [Official project brief template](docs/PROJECT_BRIEF_TEMPLATE.md)
+- [Dataset inventory and data dictionary](docs/DATA_DICTIONARY_TEMPLATE.md)
+- [Methodology](docs/METHODOLOGY.md)
+- [KPI definition template](docs/KPI_CATALOG_TEMPLATE.md)
+- [Daily progress log](docs/DAILY_PROGRESS_LOG.md)
+- [Dashboard plan](dashboard/DASHBOARD_PLAN.md)
+- [Contributing and commit conventions](CONTRIBUTING.md)
+
+## License
+
+Review `LICENSE-DECISION.md` and obtain the required approval before adding an open-source license. A public GitHub repository does not automatically mean the project or its data may be reused.
