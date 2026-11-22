@@ -1,110 +1,40 @@
-# GeoPulse | Hyper-Local Retail Mobility Analytics
+# GeoPulse: Hyper-Local Retail Mobility Analytics
 
-**Internship project · Data Associate L1 · Infotact Solutions**
+## 1. Project Overview
+GeoPulse is a geospatial analytics project focused on understanding urban mobility and retail foot traffic patterns. It aims to help retailers make informed decisions about potential store locations by analyzing anonymized mobile GPS data.
 
-GeoPulse is an analytics project intended to explore hyper-local retail and mobility patterns. The final business questions, metrics, dataset, tools, and deliverables must be confirmed against the official project brief and mentor instructions.
+## 2. Problem Statement
+Retailers often depend on static census data when selecting new store locations. This approach may fail to capture actual movement patterns and foot traffic throughout the day. As a result, a new store may overlap with the customer movement patterns of an existing store, potentially causing sales cannibalization.
 
-> **Project status:** Repository scaffold initialized. Dataset analysis and business findings have not yet been completed.
+GeoPulse aims to address this challenge through geospatial data analysis and visualization.
 
-## Project goals
+## 3. Project Objectives
+- Analyze anonymized mobile GPS pings to understand movement patterns.
+- Explore foot traffic across different locations and time periods.
+- Use spatial joins to connect GPS points with store catchment areas.
+- Calculate unique visitors per store per hour.
+- Analyze potential customer overlap between multiple store locations.
+- Develop interactive geospatial visualizations to support retail location decisions.
 
-- Understand the approved dataset, its structure, and its limitations.
-- Assess and document data quality.
-- Explore retail and mobility patterns supported by available fields.
-- Define transparent, reproducible KPIs with clear calculation logic.
-- Build visualizations and a dashboard aligned with the project requirements.
-- Communicate evidence-based findings and recommendations.
+## 4. Technology Stack
 
-## Repository map
+| Technology | Purpose |
+|---|---|
+| Snowflake | Geospatial data storage |
+| Apache Sedona / PySpark | Spatial transformations and joins |
+| dbt | Data cleaning and modeling |
+| Kepler.gl | Geospatial visualization |
+| React | Dashboard interface |
+| Apache Airflow | Workflow automation |
 
-```text
-GeoPulse-Professional-Repository/
-├── data/
-│   ├── raw/                 # Original approved data; ignored by Git
-│   ├── processed/           # Derived data; ignored by Git by default
-│   └── README.md
-├── dashboard/               # Dashboard plan, assets and documentation
-├── docs/                    # Brief, methodology, data dictionary, decisions
-├── notebooks/               # Ordered analysis notebooks
-├── reports/                 # Interim and final reports
-├── src/                     # Reusable Python modules
-├── tests/                   # Automated checks
-├── visualizations/          # Approved, non-sensitive exports
-├── .gitignore
-├── CONTRIBUTING.md
-├── LICENSE-DECISION.md
-├── requirements.txt
-└── README.md
-```
+## 5. Development Roadmap
+- **Week 1:** Generate mock anonymized GPS data and load it into Snowflake.
+- **Week 2:** Perform spatial joins and aggregate unique visitors per store per hour.
+- **Week 3:** Develop store cannibalization analysis and integrate the map interface.
+- **Week 4:** Automate data pipelines using Apache Airflow and refine the interactive map.
 
-## Quick start
+## 6. Project Status
+Repository initialization and project documentation are in progress. Implementation will follow the official project development plan.
 
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Tusharwagadre/GeoPulse-Retail-Mobility-Analytics.git
-cd GeoPulse-Retail-Mobility-Analytics
-```
-
-If you are starting from the downloaded ZIP instead, extract it and open the extracted folder in VS Code.
-
-### 2. Create a Python environment
-
-```bash
-python -m venv .venv
-```
-
-Windows PowerShell:
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-macOS/Linux:
-```bash
-source .venv/bin/activate
-```
-
-### 3. Install dependencies and run checks
-
-```bash
-pip install -r requirements.txt
-pytest
-```
-
-## Recommended project workflow
-
-1. Confirm the official brief, business questions, scope, and deliverables.
-2. Record dataset provenance, schema, grain, and coverage.
-3. Profile data quality before modifying data.
-4. Clean and transform data reproducibly; preserve original source data.
-5. Conduct exploratory analysis guided by the confirmed questions.
-6. Define and validate KPIs with explicit formulas.
-7. Build visualizations and dashboard pages.
-8. Validate results and document limitations.
-9. Prepare the final report and presentation.
-
-## Daily progress
-
-Use [`docs/DAILY_PROGRESS_LOG.md`](docs/DAILY_PROGRESS_LOG.md) to record actual progress across the planned 20-day work period. Every commit should represent a genuine change: code, analysis, documentation, testing, or a verified project decision.
-
-## Data and security policy
-
-- Do not commit confidential company data, personal information, credentials, access tokens, or restricted files.
-- Keep raw source files unchanged and out of Git unless explicit permission is given.
-- Check company rules before making this repository public.
-- Do not publish dashboard exports or screenshots containing restricted information.
-- Use synthetic or anonymized samples only when permitted.
-
-## Project documentation
-
-- [Official project brief template](docs/PROJECT_BRIEF_TEMPLATE.md)
-- [Dataset inventory and data dictionary](docs/DATA_DICTIONARY_TEMPLATE.md)
-- [Methodology](docs/METHODOLOGY.md)
-- [KPI definition template](docs/KPI_CATALOG_TEMPLATE.md)
-- [Daily progress log](docs/DAILY_PROGRESS_LOG.md)
-- [Dashboard plan](dashboard/DASHBOARD_PLAN.md)
-- [Contributing and commit conventions](CONTRIBUTING.md)
-
-## License
-
-Review `LICENSE-DECISION.md` and obtain the required approval before adding an open-source license. A public GitHub repository does not automatically mean the project or its data may be reused.
+---
+*Project: GeoPulse — Infotact Solutions Internship*
